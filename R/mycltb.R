@@ -5,7 +5,7 @@
 #' @param p The probability of a success
 #' @param ... Any graphical options to add to the histogram
 #'
-#' @return A histogram of the relative frequencies of the sample means
+#' @return A histogram of the densities of the sample means
 #' @export
 #'
 #' @examples
