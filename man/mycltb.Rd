@@ -16,7 +16,7 @@ mycltb(n, iter, p = 0.5, ...)
 \item{...}{Any graphical options to add to the histogram}
 }
 \value{
-A histogram of the relative frequencies of the sample means
+A histogram of the densities of the sample means
 }
 \description{
 mycltb
