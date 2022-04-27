@@ -34,12 +34,6 @@ This function performs the given number of iterations of the specified binomial 
 mybin(100,20,0.7)
 ```
 
-## myboot2
-This function makes bootstrap intervals of the given number of iterations using the given data, function, and alpha value and displays the interval on a histogram
-```{r}
-myboot2(iter=10000,x=fire$DISTANCE,fun="var",alpha=0.2)
-```
-
 ## mycltb
 This function plots the histogram of the number successes in each iteration of the specified binomial experiment and then plots a normal curve over the histogram for comparison
 ```{r}
