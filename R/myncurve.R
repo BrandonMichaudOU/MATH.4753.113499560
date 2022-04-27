@@ -8,7 +8,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{mybin(5,2,4)}
+#' \dontrun{myncurve(5,2,4)}
 myncurve = function(mu, sigma, a) {
   curve(dnorm(x,mean=mu,sd=sigma), xlim = c(mu - 3 * sigma,    mu + 3 * sigma))
   xcurve=seq(mu - 3 * sigma,a,length=1000)

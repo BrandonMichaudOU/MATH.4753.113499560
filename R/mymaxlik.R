@@ -9,7 +9,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{mymaxlik(x=y,lfun="logbin",param=seq(0,1,length=1000))}
+#' \dontrun{mymaxlik(x=y,lfun="mean",param=seq(0,1,length=1000))}
 mymaxlik=function(lfun,x,param,...){
   # how many param values are there?
   np=length(param)

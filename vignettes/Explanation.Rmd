@@ -1,0 +1,67 @@
+---
+title: "What the package does"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{What the package does}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH.4753.113499560)
+```
+
+# Introduction
+This package was developed as part of the curriculum for MATH 4753 at the University of Oklahoma. It contains many functions which reflect the r tools and statistical methods that I learned over the course of the semester. It also contains a data set that was included as a proof of concept that it can be packaged
+
+# Data
+The data set included with this package is called fire.R which contains data about distance from fire stations and damage caused by fires
+```{r}
+fire
+```
+
+# Function Examples
+## mybin
+This function performs the given number of iterations of the specified binomial experiment and outputs a histogram of the results
+```{r}
+mybin(100,20,0.7)
+```
+
+## myboot2
+This function makes bootstrap intervals of the given number of iterations using the given data, function, and alpha value and displays the interval on a histogram
+```{r}
+myboot2(iter=10000,x=fire$DISTANCE,fun="var",alpha=0.2)
+```
+
+## mycltb
+This function plots the histogram of the number successes in each iteration of the specified binomial experiment and then plots a normal curve over the histogram for comparison
+```{r}
+mycltb(n=5,iter=10000,p=0.3)
+```
+
+## mymaxlik
+This function graphically finds the maximum likelihood estimate for a given function, data, and check intervals
+```{r}
+y=c(3,3,4,3,4,5,5,4)
+logbin=function(x,param) log(dbinom(x,prob=param,size=20))
+mymaxlik(x=y,lfun="logbin",param=seq(0,1,length=1000))
+```
+
+## myncurve
+This function graphically displays the lower-tail probability of the last argument given the mean and standard deviation of a normal distribution
+```{r}
+myncurve(5,2,4)
+```
+
+## scatterhist
+This function plots a scatter plot of the given x and y variables and displays the histograms associated with both the x and y variables next to the scatter plot
+```{r}
+with(fire, scatterhist(DISTANCE,DAMAGE, xlab="DISTANCE"))
+```

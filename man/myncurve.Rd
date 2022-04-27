@@ -20,5 +20,5 @@ A graph of the normal distribution with the specified probability shaded
 myncurve
 }
 \examples{
-\dontrun{mybin(5,2,4)}
+\dontrun{myncurve(5,2,4)}
 }

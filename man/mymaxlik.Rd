@@ -22,5 +22,5 @@ A plot of the log likelihood with the maximum labeled, the value of the maximum 
 mymaxlik
 }
 \examples{
-\dontrun{mymaxlik(x=y,lfun="logbin",param=seq(0,1,length=1000))}
+\dontrun{mymaxlik(x=y,lfun="mean",param=seq(0,1,length=1000))}
 }
